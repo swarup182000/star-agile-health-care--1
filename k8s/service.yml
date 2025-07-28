@@ -7,6 +7,7 @@ spec:
   selector:
     app: medicure
   ports:
-    - port: 80
-      targetPort: 8081
-      nodePort: 30081
+    - port: 8082         # ClusterIP port
+      targetPort: 8082   # app running inside container
+      nodePort: 30081    # public NodePort
+
